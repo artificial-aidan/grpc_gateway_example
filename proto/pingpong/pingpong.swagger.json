@@ -1,0 +1,112 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "title": "pingpong/pingpong.proto",
+    "version": "version not set"
+  },
+  "tags": [
+    {
+      "name": "PingPongService"
+    }
+  ],
+  "consumes": [
+    "application/json"
+  ],
+  "produces": [
+    "application/json"
+  ],
+  "paths": {
+    "/v1/example/pingpong": {
+      "post": {
+        "summary": "Pingpong a very simple pingpong\r\n\r\nThis is pingpong request/respond service",
+        "operationId": "PingPongService_Pingpong",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/pingpongPong"
+            }
+          },
+          "default": {
+            "description": "An unexpected error response.",
+            "schema": {
+              "$ref": "#/definitions/rpcStatus"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/pingpongPing"
+            }
+          }
+        ],
+        "tags": [
+          "PingPongService"
+        ]
+      }
+    }
+  },
+  "definitions": {
+    "pingpongAddress": {
+      "type": "object",
+      "properties": {
+        "source": {
+          "type": "string"
+        },
+        "destination": {
+          "type": "string"
+        }
+      }
+    },
+    "pingpongPing": {
+      "type": "object",
+      "properties": {
+        "data": {
+          "$ref": "#/definitions/pingpongAddress"
+        }
+      }
+    },
+    "pingpongPong": {
+      "type": "object",
+      "properties": {
+        "result": {
+          "type": "string"
+        }
+      }
+    },
+    "protobufAny": {
+      "type": "object",
+      "properties": {
+        "typeUrl": {
+          "type": "string"
+        },
+        "value": {
+          "type": "string",
+          "format": "byte"
+        }
+      }
+    },
+    "rpcStatus": {
+      "type": "object",
+      "properties": {
+        "code": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "message": {
+          "type": "string"
+        },
+        "details": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/protobufAny"
+          }
+        }
+      }
+    }
+  }
+}
