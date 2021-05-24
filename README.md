@@ -267,6 +267,8 @@ https://swagger.io/tools/swagger-editor/  หน้าเว็บจะ auto co
 
 ## References
 
+- [gRPC.io](https://grpc.io/)
+- [BloomRPC: gRPC Postman-like](https://github.com/uw-labs/bloomrpc)
 - [gRPC-Gateway](https://github.com/grpc-ecosystem/grpc-gateway/)
 - [gROC-Gateway tutorial](https://grpc-ecosystem.github.io/grpc-gateway/docs/tutorials/adding_annotations/)
 - [How gRPC services map to the JSON request and response](https://github.com/grpc-ecosystem/grpc-gateway/blob/master/examples/internal/proto/examplepb/a_bit_of_everything.proto)
@@ -276,3 +278,5 @@ https://swagger.io/tools/swagger-editor/  หน้าเว็บจะ auto co
 - [docker-protobuf](https://github.com/TheThingsIndustries/docker-protobuf)
 - [HTTP Graceful Shutdown](https://medium.com/honestbee-tw-engineer/gracefully-shutdown-in-go-http-server-5f5e6b83da5a)
 - [Online swagger-editor](https://swagger.io/tools/swagger-editor/)
+- [Example gRPC gateway protobuf file: google pubsub](https://github.com/googleapis/googleapis/blob/master/google/pubsub/v1/pubsub.proto)
+- [Example gRPC gateway protobuf file: google spanner](https://github.com/googleapis/googleapis/blob/master/google/spanner/v1/spanner.proto)
