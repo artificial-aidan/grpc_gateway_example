@@ -1,4 +1,4 @@
-module github.com/napat/gprc-gateway
+module github.com/artificial-aidan/grpc_gateway_example
 
 go 1.15
 
